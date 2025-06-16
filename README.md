@@ -39,9 +39,25 @@ The datasets are extracted from three social media platforms ([Personality Cafe 
 
 ## 📊Results
 
-## Fine-tuning
+### Fine-tuning
 
-## In-Context Learning
+| Task         | Dataset     | Accuracy | Precision | Recall | F1-Score |
+|--------------|-------------|----------|-----------|--------|----------|
+| mbti-16types | Training Set| 87.03    | 86.91     | 87.03  | 86.87    |
+| I vs E       | Training Set| 98.32    | 98.32     | 98.32  | 98.32    |
+| N vs S       | Training Set| 98.38    | 98.38     | 98.38  | 98.38    |
+| F vs T       | Training Set| 98.49    | 98.49     | 98.49  | 98.49    |
+| J vs P       | Training Set| 98.20    | 98.20     | 98.20  | 98.20    |
+| mbti-16types | Test Set    | 71.85    | 72.95     | 71.95  | 72.00    |
+| I vs E       | Test Set    | 56.52    | 55.81     | 56.52  | 55.93    |
+| N vs S       | Test Set    | 57.50    | 57.16     | 57.50  | 57.29    |
+| F vs T       | Test Set    | 57.72    | 57.45     | 57.72  | 57.31    |
+| J vs P       | Test Set    | 52.91    | 52.91     | 52.91  | 52.70    |
+
+### In-Context Learning (ICL)
 ![icl zero-shot no cot](imgs/icl_zero-shot.png)
 
 ## 📝 Conclusion
+1. In Fine-tuning, mbti-16type is performed better than binary axes classification testing set. It suggests binary axis traits are semantically and syntactically less obvious to differentiate.
+2. Human performed poorly compared with LLMs, most likely due to cognitive biases.
+3. In ICL with CoT, Logical Flow metric scored the highest but low in other metrics. It suggessts LLMs are able to produce logically coherent despite lack of evident quality.
